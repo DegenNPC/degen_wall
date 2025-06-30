@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    "resolveJsonModule": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "outDir": "./test_dist",
+    "rootDir": "./tests",
+    "module": "CommonJS"
+  },
+  "include": ["src"]
+}

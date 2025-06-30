@@ -1,0 +1,21 @@
+.anchor
+.DS_Store
+**/*.rs.bk
+node_modules
+test-ledger
+.yarn
+# Ignore everything in target
+target/*
+# Unignore the idl and types directories
+!target/idl/
+!target/types/
+.env
+
+# typescript
+dist/
+.cache
+
+# turbo
+.turbo
+degen_wall-deployer.json
+degen_wall-treasury.json

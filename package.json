@@ -1,0 +1,45 @@
+{
+  "name": "@degen_wall/anchor",
+  "private": true,
+  "version": "0.1.0",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "dev": "tsc",
+    "format": "prettier --check . --ignore-path ../../.prettierignore",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false",
+    "install:npm": "node scripts/install.js",
+    "patch:npm": "node scripts/patch.js",
+    "unpatch:npm": "node scripts/unpatch.js",
+    "test": "node run_tests.js",
+    "ping": "node run_tests.js ping.ts"
+  },
+  "devDependencies": {
+    "@degen_wall/eslint-config": "workspace:*",
+    "@degen_wall/prettier-config": "workspace:*",
+    "@degen_wall/tsconfig": "workspace:*",
+    "@types/bn.js": "^5.1.6",
+    "@types/chai": "^4.3.20",
+    "@types/mocha": "^9.1.1",
+    "chai": "^4.5.0",
+    "eslint": "catalog:",
+    "mocha": "^9.2.2",
+    "prettier": "catalog:",
+    "ts-mocha": "^11.1.0",
+    "typescript": "catalog:"
+  },
+  "prettier": "@degen_wall/prettier-config",
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.31.1",
+    "@coral-xyz/borsh": "^0.31.1",
+    "@solana/spl-token": "^0.4.13",
+    "@solana/web3.js": "^1.98.2",
+    "bs58": "^6.0.0"
+  },
+  "type": "module"
+}
