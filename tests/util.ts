@@ -10,7 +10,7 @@ import { DegenWallProgram, ProgramStatic } from "../src";
 dotenv.config();
 
 export const loadKeypair = (file: KeyPairFile): Keypair => {
-  const data = readFileSync(homedir() + `/.config/solana/${file}`, "utf-8");
+  const data = readFileSync(`./${file}`, "utf-8");
 
   return Keypair.fromSecretKey(Buffer.from(JSON.parse(data)));
 };
@@ -22,8 +22,8 @@ export const loadProgramIdl = (name: string): Idl => {
 };
 
 export enum KeyPairFile {
-  main = "id-degen_wall.json",
-  alt = "id-degen_wall-alt.json",
+  main = "degen_wall-deployer.json",
+  alt = "degen_wall-treasury.json",
 }
 
 export const toCamelCase = (str: string): string => {
